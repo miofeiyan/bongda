@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Thể Thao</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+        }
+        nav {
+            background: #005bb5;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .main-container {
+            display: grid;
+            grid-template-areas:
+                "news news ranking"
+                "videos schedule schedule";
+            gap: 20px;
+            padding: 20px;
+        }
+        .side-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+        .section {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .news { grid-area: news; }
+        .ranking { grid-area: ranking; }
+        .videos { grid-area: videos; }
+        .schedule { grid-area: schedule; }
+        .comments, .login { width: 100%; }
+
+        .section img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .comments textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+        .comments button, .login button {
+            background: #0073e6;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-areas:
+                    "news"
+                    "ranking"
+                    "videos"
+                    "schedule";
+            }
+            .side-container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Trang Tin Thể Thao</h1>
+    </header>
+    <nav>
+        <a href="#">Trang Chủ</a>
+        <a href="#">Bóng Đá</a>
+        <a href="#">Bóng Rổ</a>
+        <a href="#">Tennis</a>
+        <a href="#">Lịch Thi Đấu</a>
+        <a href="#">Liên Hệ</a>
+    </nav>
+    <div class="main-container">
+        <div class="section news">
+            <img src="https://imgnvsk.vnanet.vn/MediaUpload/Medium/2023/09/06/shutterstock-2190840355-scaled6-11-31-13.jpg" alt="World Cup">
+            <h2>Vòng Loại World Cup 2026</h2>
+            <p>Đội tuyển Việt Nam đang chuẩn bị cho vòng loại World Cup 2026 với nhiều kỳ vọng. Các cầu thủ đang tập luyện chăm chỉ dưới sự dẫn dắt của HLV mới, đặt mục tiêu tiến  sâu vào vòng loại. Người hâm mộ cả nước đang rất mong chờ những màn trình diễn ấn tượng từ đội tuyển.</p>
+        </div>
+        <div class="section ranking">
+            <img src="https://file3.qdnd.vn/data/images/0/2021/10/13/phamdiep_kh/bang-b.jpg?dpi=150&quality=100&w=870" alt="Bảng Xếp Hạng">
+            <h2>Bảng Xếp Hạng</h2>
+            <p>Thông tin bảng xếp hạng các đội bóng, cập nhật liên tục. Hiện tại, đội đầu bảng đang có phong độ ổn định với chuỗi trận thắng ấn tượng. Các đội bám đuổi phía sau cũng đang cạnh tranh quyết liệt để giành vị trí cao hơn.</p>
+        </div>
+        <div class="section videos">
+            <img src="https://i.ytimg.com/vi/q-U0gFUzvAM/sddefault.jpg" alt="Video Nổi Bật">
+            <h2>Hình ảnh Nổi Bật</h2>
+            <p>Các trận đấu hấp dẫn, pha bóng đẹp mắt. Những cuộc đối đầu giữa các đội bóng hàng đầu đang mang đến những phút giây kịch tính cho người hâm mộ. Những pha lập công ấn tượng và chiến thuật đặc sắc khiến người xem không thể rời mắt khỏi màn hình.</p>
+        </div>
+        <div class="section schedule">
+            <img src="https://file3.qdnd.vn/data/images/0/2022/12/07/trungthanh_tv/lichthidau.jpg?dpi=150&quality=100&w=870" alt="Lịch Thi Đấu">
+            <h2>Lịch Thi Đấu</h2>
+            <p>Cập nhật lịch thi đấu mới nhất của các giải đấu lớn. Trận cầu tâm điểm sắp tới sẽ là cuộc đối đầu giữa hai đội bóng mạnh nhất giải, hứa hẹn mang đến những pha bóng mãn nhãn. Các trận đấu khác cũng đang nhận được sự quan tâm lớn từ người hâm mộ</p>
+        </div>
+    </div>
+    <div class="side-container">
+        <div class="section comments">
+            <h2>Bình Luận</h2>
+            <textarea placeholder="Nhập bình luận của bạn..."></textarea>
+            <button>Gửi</button>
+        </div>
+        <div class="section login">
+            <h2>Đăng Nhập</h2>
+            <input type="text" placeholder="Tên đăng nhập">
+            <input type="password" placeholder="Mật khẩu">
+            <button>Đăng Nhập</button>
+        </div>
+    </div>
+</body>
+</html>
